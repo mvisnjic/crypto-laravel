@@ -1,0 +1,12 @@
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+.w-full {
+    width: 100%;
+}
+.font-bold {
+    font-weight: bold;
+}
