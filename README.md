@@ -29,5 +29,6 @@ Publish your code on github and provide us with the repo URL.
 3. `cp .env.example .env`
 4. `php artisan key:generate`
 5. `touch database/database.sqlite`
-6. `php artisan update:crypto-currencies`
-7. `php artisan serve`
+6. `php artisan migrate`
+7. `php artisan update:crypto-currencies`
+8. `php artisan serve`
