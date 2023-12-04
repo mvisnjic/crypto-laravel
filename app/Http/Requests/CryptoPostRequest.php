@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator as Validator;
 
 class CryptoPostRequest extends FormRequest
 {
@@ -26,5 +27,9 @@ class CryptoPostRequest extends FormRequest
             'price' => 'required',
             'rank' => 'required|integer'
         ];
+    }
+    protected function failedValidation(Validator $validator)
+    {
+     throw new \Illuminate\Validation\ValidationException($validator, response()->json(['errors' => $validator->errors()], 422));
     }
 }
